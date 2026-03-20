@@ -106,6 +106,10 @@ OLS will review your changes, ask questions if needed, and merge when ready. Onc
 
 ## For OLS Systems Librarians
 
+### Prerequisites
+
+Same as campus librarians: [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running, Git, and a GitHub account with access to [github.com/cuny-libraries](https://github.com/cuny-libraries). Clone the repo and run `docker compose build` once before first use.
+
 ### Running the dev server
 
 ```bash
