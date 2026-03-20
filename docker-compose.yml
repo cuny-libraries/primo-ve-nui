@@ -8,7 +8,4 @@ services:
     environment:
       # Prevents BrowserSync from trying to open a browser inside the container
       - BROWSER=none
-    # Reads CAMPUS and VIEW_CODE from your .env file
-    # CAMPUS    = 2-letter campus code (lowercase), e.g. bx, ny, qc
-    # VIEW_CODE = exact folder name under primo-explore/custom/, e.g. CUNY_BX
     command: ["--view", "${VIEW_CODE}", "--proxy", "https://cuny-${CAMPUS}.primo.exlibrisgroup.com:443"]
