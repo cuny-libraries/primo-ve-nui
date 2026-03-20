@@ -1,7 +1,7 @@
 # York College
 
 **Primo view code**: `CUNY_YC`
-**OneSearch**: <https://cuny-yc.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-yc.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_YC:CUNY_YC>
 **Campus website**: <https://www.york.cuny.edu/>
 
 A liberal arts college in Jamaica, Queens.

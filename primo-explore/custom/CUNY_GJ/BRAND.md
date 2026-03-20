@@ -1,7 +1,7 @@
 # Craig Newmark Graduate School of Journalism at CUNY
 
 **Primo view code**: `CUNY_GJ`
-**OneSearch**: <https://cuny-gj.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-gj.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_GJ:CUNY_GJ>
 **Campus website**: <https://journalism.cuny.edu/>
 
 A graduate journalism school located in Midtown Manhattan.

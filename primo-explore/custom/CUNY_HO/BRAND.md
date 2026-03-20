@@ -1,7 +1,7 @@
 # Hostos Community College
 
 **Primo view code**: `CUNY_HO`
-**OneSearch**: <https://cuny-ho.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-ho.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_HO:CUNY_HO>
 **Campus website**: <https://www.hostos.cuny.edu/>
 
 A bilingual (English/Spanish) community college in the South Bronx, named for Eugenio Maria de Hostos.

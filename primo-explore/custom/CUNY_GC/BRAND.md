@@ -1,7 +1,7 @@
 # CUNY Graduate Center
 
 **Primo view code**: `CUNY_GC`
-**OneSearch**: <https://cuny-gc.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-gc.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_GC:CUNY_GC>
 **Campus website**: <https://www.gc.cuny.edu/>
 
 CUNY's doctoral and advanced research hub, located in Midtown Manhattan.

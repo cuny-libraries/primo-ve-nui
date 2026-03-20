@@ -1,7 +1,7 @@
 # The City College of New York
 
 **Primo view code**: `CUNY_CC`
-**OneSearch**: <https://cuny-cc.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-cc.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_CC:CUNY_CC>
 **Campus website**: <https://www.ccny.cuny.edu/>
 
 The flagship college of CUNY, located in Hamilton Heights, Manhattan. Includes the Division of Science and Innovation (DSI).

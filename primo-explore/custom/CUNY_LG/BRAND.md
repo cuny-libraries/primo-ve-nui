@@ -1,7 +1,7 @@
 # LaGuardia Community College
 
 **Primo view code**: `CUNY_LG`
-**OneSearch**: <https://cuny-lg.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-lg.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_LG:CUNY_LG>
 **Campus website**: <https://www.laguardia.edu/>
 
 A community college in Long Island City, Queens, named for Mayor Fiorello La Guardia.

@@ -1,7 +1,7 @@
 # New York City College of Technology (CityTech)
 
 **Primo view code**: `CUNY_NY`
-**OneSearch**: <https://cuny-ny.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-ny.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_NY:CUNY_NY>
 **Campus website**: <https://www.citytech.cuny.edu/>
 
 A technology and applied sciences college in Downtown Brooklyn.

@@ -1,7 +1,7 @@
 # Queensborough Community College
 
 **Primo view code**: `CUNY_QB`
-**OneSearch**: <https://cuny-qb.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-qb.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_QB:CUNY_QB>
 **Campus website**: <https://www.qcc.cuny.edu/>
 
 A community college in Bayside, Queens.

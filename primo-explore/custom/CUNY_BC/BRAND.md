@@ -1,7 +1,7 @@
 # Brooklyn College
 
 **Primo view code**: `CUNY_BC`
-**OneSearch**: <https://cuny-bc.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-bc.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_BC:CUNY_BC>
 **Campus website**: <https://www.brooklyn.cuny.edu/>
 
 A liberal arts and sciences college in Flatbush, Brooklyn.

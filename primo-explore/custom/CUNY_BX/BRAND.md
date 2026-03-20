@@ -1,7 +1,7 @@
 # Bronx Community College
 
 **Primo view code**: `CUNY_BX`
-**OneSearch**: <https://cuny-bx.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-bx.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_BX:CUNY_BX>
 **Campus website**: <https://www.bcc.cuny.edu/>
 
 A community college in the University Heights neighborhood of the Bronx.

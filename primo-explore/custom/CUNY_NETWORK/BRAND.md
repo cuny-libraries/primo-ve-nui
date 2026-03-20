@@ -1,7 +1,7 @@
 # CUNY Network (Consortium)
 
 **Primo view code**: `CUNY_NETWORK`
-**OneSearch**: <https://cuny-network.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-network.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_NETWORK:CUNY_NETWORK>
 **Campus website**: <https://www.cuny.edu/>
 
 Consortium-level Primo view used for cross-campus searching. Shares the CUNY system-wide color palette.

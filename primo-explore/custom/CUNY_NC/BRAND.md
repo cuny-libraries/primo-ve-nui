@@ -1,7 +1,7 @@
 # Guttman Community College
 
 **Primo view code**: `CUNY_NC`
-**OneSearch**: <https://cuny-nc.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-nc.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_NC:CUNY_NC>
 **Campus website**: <https://guttman.cuny.edu/>
 
 Stella and Charles Guttman Community College in Midtown Manhattan, CUNY's newest community college.

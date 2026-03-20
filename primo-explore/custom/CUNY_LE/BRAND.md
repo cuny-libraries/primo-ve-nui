@@ -1,7 +1,7 @@
 # Lehman College
 
 **Primo view code**: `CUNY_LE`
-**OneSearch**: <https://cuny-le.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-le.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_LE:CUNY_LE>
 **Campus website**: <https://www.lehman.cuny.edu/>
 
 A liberal arts college in the Bedford Park neighborhood of the Bronx.

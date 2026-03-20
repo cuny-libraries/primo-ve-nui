@@ -1,7 +1,7 @@
 # Queens College
 
 **Primo view code**: `CUNY_QC`
-**OneSearch**: <https://cuny-qc.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-qc.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_QC:CUNY_QC>
 **Campus website**: <https://www.qc.cuny.edu/>
 
 A liberal arts college in Flushing, Queens.

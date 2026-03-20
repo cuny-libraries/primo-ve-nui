@@ -1,7 +1,7 @@
 # Baruch College
 
 **Primo view code**: `CUNY_BB`
-**OneSearch**: <https://cuny-bb.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-bb.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_BB:CUNY_BB>
 **Campus website**: <https://www.baruch.cuny.edu/>
 
 Bernard M. Baruch College, a business-focused liberal arts college in Midtown Manhattan.

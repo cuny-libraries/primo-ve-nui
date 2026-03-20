@@ -1,7 +1,7 @@
 # Kingsborough Community College
 
 **Primo view code**: `CUNY_KB`
-**OneSearch**: <https://cuny-kb.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-kb.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_KB:CUNY_KB>
 **Campus website**: <https://www.kbcc.cuny.edu/>
 
 A community college in Manhattan Beach, Brooklyn, with a maritime focus.

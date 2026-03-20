@@ -1,7 +1,7 @@
 # John Jay College of Criminal Justice
 
 **Primo view code**: `CUNY_JJ`
-**OneSearch**: <https://cuny-jj.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-jj.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_JJ:CUNY_JJ>
 **Campus website**: <https://www.jjay.cuny.edu/>
 
 A liberal arts college specializing in criminal justice and public service, located in Midtown Manhattan.

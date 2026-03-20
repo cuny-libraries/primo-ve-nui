@@ -1,7 +1,7 @@
 # Medgar Evers College
 
 **Primo view code**: `CUNY_ME`
-**OneSearch**: <https://cuny-me.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-me.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_ME:CUNY_ME>
 **Campus website**: <https://www.mec.cuny.edu/>
 
 A liberal arts college in Crown Heights, Brooklyn, named for civil rights leader Medgar Evers.

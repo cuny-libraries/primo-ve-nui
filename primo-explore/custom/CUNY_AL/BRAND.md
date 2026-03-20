@@ -1,7 +1,7 @@
 # CUNY All Libraries (Network)
 
 **Primo view code**: `CUNY_AL`
-**OneSearch**: <https://cuny-al.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-al.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_AL:CUNY_AL>
 **Campus website**: <https://www.cuny.edu/libraries/>
 
 General CUNY-wide Primo view used as a fallback for campuses without dedicated views. Shares colors with CUNY_NETWORK.

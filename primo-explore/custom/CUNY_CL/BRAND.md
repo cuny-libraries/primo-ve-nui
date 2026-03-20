@@ -1,7 +1,7 @@
 # CUNY School of Law
 
 **Primo view code**: `CUNY_CL`
-**OneSearch**: <https://cuny-cl.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-cl.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_CL:CUNY_CL>
 **Campus website**: <https://www.law.cuny.edu/>
 
 A public law school in Long Island City, Queens, with a focus on law in the service of human needs.

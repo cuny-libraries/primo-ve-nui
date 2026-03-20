@@ -1,7 +1,7 @@
 # Hunter College & Centro
 
 **Primo view code**: `CUNY_HC`
-**OneSearch**: <https://cuny-hc.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-hc.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_HC:CUNY_HC>
 **Campus website**: <https://www.hunter.cuny.edu/>
 
 A liberal arts college on the Upper East Side of Manhattan. Includes Centro de Estudios Puertorriqueños.

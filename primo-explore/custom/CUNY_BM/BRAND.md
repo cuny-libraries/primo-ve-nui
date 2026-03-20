@@ -1,7 +1,7 @@
 # Borough of Manhattan Community College
 
 **Primo view code**: `CUNY_BM`
-**OneSearch**: <https://cuny-bm.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-bm.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_BM:CUNY_BM>
 **Campus website**: <https://www.bmcc.cuny.edu/>
 
 BMCC is the largest community college in the CUNY system, located in Lower Manhattan.

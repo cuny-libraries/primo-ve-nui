@@ -1,7 +1,7 @@
 # College of Staten Island
 
 **Primo view code**: `CUNY_SI`
-**OneSearch**: <https://cuny-si.primo.exlibrisgroup.com/>
+**OneSearch**: <https://cuny-si.primo.exlibrisgroup.com/discovery/search?vid=01CUNY_SI:CUNY_SI>
 **Campus website**: <https://www.csi.cuny.edu/>
 
 A liberal arts college on a 204-acre campus in Willowbrook, Staten Island.
