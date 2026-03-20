@@ -1,8 +1,6 @@
-primo-explore/custom/
+node_modules/
+primo-explore/custom/*/node_modules/
 primo-explore/tmp/
-
-!primo-explore/custom/.gitignore
-!primo-explore/tmp/.gitignore
-
-.idea/
-package-lock.json
+packages/
+.env
+.DS_Store

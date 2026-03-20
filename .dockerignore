@@ -1,0 +1,7 @@
+node_modules
+primo-explore/custom
+primo-explore/tmp
+packages
+.env
+.env.*
+!.env.example

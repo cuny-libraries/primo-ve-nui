@@ -1,0 +1,29 @@
+name: Create Packages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'primo-explore/custom/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create zip packages for all views
+        run: |
+          mkdir -p packages
+          for view in primo-explore/custom/*/; do
+            view_code=$(basename "$view")
+            (cd primo-explore/custom && zip -qr "../../packages/${view_code}.zip" "${view_code}/")
+            echo "Packaged: ${view_code}"
+          done
+
+      - name: Upload packages as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: primo-ve-packages
+          path: packages/*.zip
+          retention-days: 90

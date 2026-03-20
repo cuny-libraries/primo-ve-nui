@@ -1,0 +1,328 @@
+/*
+--------------------------------------------------
+GLOBAL CHANGES
+--------------------------------------------------
+*/
+
+/* Imports Google Font -- make sure this is at the top of the CSS file! */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+
+/* Adjusts overall font used in discovery */
+body {
+  font-size: 16px;
+  font-family: 'Inter',sans-serif;
+  line-height: 16pt;
+}
+
+/* Adjusts font in facets to match overall text */
+.md-chips {
+  font-family: 'Inter',sans-serif;
+}
+
+/* Adjusts font in buttons to match overall text */
+.md-button {
+  font-size: 16px;
+}
+
+/* Removes shadow from location items and matches to other "boxes" in discovery */
+prm-location-items md-list, prm-opac md-list md-list-item:last-of-type {
+  box-shadow: none;
+}
+.md-2-line.has-expand.md-no-proxy.md-with-secondary._md {
+  background-color: #f1f1f1;
+}
+
+/* OneSearch logo */
+.search-wrapper .flex-xl-20.flex-md-0.flex-lg-10.flex-0 {
+    background-image: url('../img/onesearch_grayscale.png');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+/* Hide Refworks from user area menu */
+.my-refworks-ctm{
+	display: none;
+}
+.my-refworks-separator-ctm{
+	display: none;
+}
+
+/* Hide Primo Research Assistant */
+/* while testing the new AI tool */
+#raContainer {
+	visibility: hidden;
+	display: none;
+}
+/* Expand alphabet options in A-Z list in Journal & DB search */
+prm-alphabet-toolbar .md-button.letter-button {
+  min-width: 32px;
+}
+
+/* 
+--------------------------------------------------
+BRIEF RECORD DISPLAY & FACETS
+--------------------------------------------------
+*/
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary {
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+
+/*
+--------------------------------------------------
+FULL RECORD DISPLAY
+--------------------------------------------------
+*/
+
+/* Hides navigation pane */
+prm-full-view .services-index-under #services-index {
+  display: none;
+}
+
+/* Changes width of sub sections */
+.__gt-xs .full-view-section-content {
+  padding-left: 0em;
+}
+
+/* Changes page background */
+#full-view-container > div.full-view-inner-container.flex {
+  background-color: #ffffff;
+  border-color: #fff;
+}
+
+/* Makes each section a block */
+prm-full-view-service-container {
+  display: block;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Boldens section titles */
+.full-view-section .section-title {
+  font-weight: 800;
+  padding-left: .5em;
+  border-left: 5px solid #FFB71B;
+}
+
+/* Boldens button text */
+.md-button.button-with-icon > prm-icon + span {
+  font-weight: 800;
+}
+
+/* Distinguishes content type */
+prm-brief-result-container .media-content-type {
+  font-weight: 800;
+  font-size: x-small;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 10px;
+}
+
+/* Distinguishes links in "Get It" section */
+.separate-list-items md-list-item {
+  margin-bottom: 5px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+}
+.separate-list-items md-list-item:hover {
+  border-radius: 6px;
+}
+.item-title.md-primoExplore-theme {
+  font-weight: bold;
+}
+prm-additional-services .additional-service div.md-list-item-text {
+  padding-left: 2em;
+}
+
+/* Action menu expands in style similar to "Get It" section */
+.send-actions-content-item > md-content, .send-actions-content-item > md-content.md-primoExplore-theme {
+  padding: 1em;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Styles cards in Virtual Browse section */
+prm-virtual-browse-item md-card {
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  box-shadow: none;
+}
+prm-virtual-browse-item md-card md-card-title-text::after {
+  background: none;
+}
+.current-item prm-virtual-browse-item md-card {
+  background-color: #ffffff;
+  box-shadow: none;
+  font-weight: 800;
+}
+
+/*
+--------------------------------------------------
+RESOURCE RECOMMENDER BANNER
+--------------------------------------------------
+*/
+
+/* Remove gradient background */
+.__gt-sm prm-banner-card-content .md-button.arrow-link-button .button-content:focus .banner-title, .__gt-sm prm-banner-card-content .md-button.arrow-link-button .button-content:hover .banner-title, .__gt-sm prm-banner-card-content .recommendations-title.hover > span > span .banner-title, .__gt-sm prm-banner-card-content .recommendations-title:hover > span > span .banner-title, .__gt-sm prm-banner-card-content a:focus .banner-title, .__gt-sm prm-banner-card-content a:hover .banner-title, .__gt-sm prm-banner-card-content prm-tags-list .md-chips .md-chip .md-chip-content:hover strong .banner-title, .__gt-sm prm-banner-card-content prm-tags-list .md-chips md-chip .md-chip-content:hover strong .banner-title, .__gt-sm prm-banner-card-content prm-tags-list md-chips .md-chip .md-chip-content:hover strong .banner-title, .__gt-sm prm-banner-card-content prm-tags-list md-chips md-chip .md-chip-content:hover strong .banner-title, .md-button.arrow-link-button .__gt-sm prm-banner-card-content .button-content:focus .banner-title, .md-button.arrow-link-button .__gt-sm prm-banner-card-content .button-content:hover .banner-title, prm-tags-list .md-chips .md-chip .md-chip-content:hover .__gt-sm prm-banner-card-content strong .banner-title, prm-tags-list .md-chips md-chip .md-chip-content:hover .__gt-sm prm-banner-card-content strong .banner-title, prm-tags-list md-chips .md-chip .md-chip-content:hover .__gt-sm prm-banner-card-content strong .banner-title, prm-tags-list md-chips md-chip .md-chip-content:hover .__gt-sm prm-banner-card-content strong .banner-title {
+	background: transparent;}
+	
+/* Set width for name, main title, and description */
+prm-banner-card-content .banner-content md-card-title {width: calc(100% - 80px);}
+	
+/* Add padding to bottom of Resource Recommender */
+prm-resource-recommender {padding-bottom: 10px;}
+	
+/* Banner hover overrides (adjustments to match normal styling)*/
+.__gt-sm prm-banner-card-content a:hover .banner-subhead, .__gt-sm prm-banner-card-content a:focus .banner-subhead, .__gt-sm prm-banner-card-content div:hover .banner-subhead,  .__gt-sm prm-banner-card-content div:focus .banner-subhead {
+	display: block !important;}
+	
+/* Remove min. height for banner */
+prm-banner-card-content .banner-content {
+	min-height: auto !important;
+	max-height: none !important;}
+	
+/* Replace background image with gradient and other styling */
+.banner-content.banner-cover-image {
+	background-image: linear-gradient(to right,#ff0000 20px,#ffffff 20px) !important;
+	height: inherit;
+	padding-left: 35px;
+	border-radius: 5px 0 0 5px;
+	background: #ffffff;}
+	
+/* Adjust banner padding */
+prm-banner-card-content .banner-content md-card-title-text, .__gt-sm prm-banner-card-content a:hover md-card-title-text, .__gt-sm prm-banner-card-content a:focus md-card-title-text, .__gt-sm prm-banner-card-content div:hover md-card-title-text, .__gt-sm prm-banner-card-content div:focus md-card-title-text {
+		padding: 15px 0 25px 0 !important;							}
+	
+/* Remove banner content span padding */
+prm-banner-card-content .banner-content md-card-title md-card-title-text span {
+	background-color: transparent;
+	color: #000000;
+	padding: 0 !important;}
+	
+/* Adjust banner content padding */
+md-truncate.bigger-title.main-text-banner.md-truncate, md-truncate.banner-subhead.main-text-banner.md-truncate {
+	padding-left: 10px !important;}
+	
+/* Adjust banner text wrap */
+md-card-title-text.md-truncate, md-truncate.banner-subhead.main-text-banner.md-truncate, md-truncate.bigger-title.main-text-banner.md-truncate, .__gt-sm prm-banner-card-content a:hover .main-text-banner, .__gt-sm prm-banner-card-content a:focus .main-text-banner, .__gt-sm prm-banner-card-content div:hover .main-text-banner,
+.__gt-sm prm-banner-card-content div:focus .main-text-banner {
+	overflow: hidden !important;
+	white-space: break-spaces !important;}
+	
+/* Hide banner display name */
+/*
+.banner-display-name {
+	display: none !important;}
+*/
+
+/* Increase size/weight of banner name */
+.banner-display-name {
+  font-size: x-large !important;
+  font-weight: 800 !important;
+}
+	
+/* Adjust banner main title font */
+prm-banner-card-content .banner-content md-card-title md-card-title-text .banner-title, .__gt-sm prm-banner-card-content a:hover .banner-title, .__gt-sm
+prm-banner-card-content a:focus .banner-title, .__gt-sm prm-banner-card-content div:hover .banner-title, .__gt-sm prm-banner-card-content div:focus .banner-title {
+	color: #000 !important;
+	font-size: 26px !important;
+	font-weight: 500 !important;
+	line-height: normal !important;
+	opacity: 100% !important;
+	position: relative !important;
+	text-transform: none !important;
+	word-spacing: normal !important;}
+	
+prm-banner-card-content .banner-content md-card-title-text .bigger-title, .__gt-sm prm-banner-card-content a:focus .bigger-title, .__gt-sm prm-banner-card-content a:hover .bigger-title, .__gt-sm prm-banner-card-content div:focus .bigger-title, .__gt-sm prm-banner-card-content div:hover .bigger-title {
+	margin: .25em 0 .7em !important;}
+	
+/* Adjust banner description font */
+prm-banner-card-content .banner-content md-card-title md-card-title-text .banner-subhead {
+	font-size: 16px !important;}
+	
+/* Link text max width */
+prm-banner-card-content .banner-content .url-text {max-width: 115px;}
+
+/* Adjust bottom position of banner link text */
+prm-banner-card-content .banner-content .url-text {
+	background: #0f7d00;
+	bottom: 0 !important;}
+
+/* hide RR banner on handheld devices */
+/*
+@media screen and (max-width: 600px) {
+  .main-banner-content {
+    display:none;
+  }
+}
+*/
+
+/*
+--------------------------------------------------
+FEATURED COLLECTIONS
+--------------------------------------------------
+*/
+.collection-title.bold-text {
+	line-height: normal;
+}
+
+/*
+--------------------------------------------------
+ALERTS
+--------------------------------------------------
+*/
+.alert-primary {
+	color: #004085;
+	background-color: #cce5ff;
+	border-color: #b8daff;
+}
+.alert-secondary {
+	color: #383d41;
+	background-color: #e2e3e5;
+	border-color: #d6d8db;
+}
+.alert-success {
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+}
+.alert-danger {
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+.alert-warning {
+	color: #856404;
+	background-color: #fff3cd;
+	border-color: #ffeeba;
+}
+.alert-info {
+	color: #0c5460;
+	background-color: #d1ecf1;
+	border-color: #bee5eb;
+}
+.alert-light {
+	color: #818182;
+	background-color: #fefefe;
+	border-color: #fdfdfe;
+}
+.alert-dark {
+	color: #1b1e21;
+	background-color: #d6d8d9;
+	border-color: #c6c8ca;
+}
+.alert {
+	position: relative;
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	border-radius: .25rem;
+	font-size: large;
+}
