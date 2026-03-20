@@ -1,128 +1,174 @@
+# primo-ve-nui
 
+Customization packages for CUNY's Primo VE New UI (NUI), plus a local development environment for previewing changes before they go live.
 
+## How it works
 
-# The Primo New UI Customization Workflow Development Environment
+This repository holds the CSS, JavaScript, HTML, and image files for every CUNY campus's Primo view, along with a shared **central package** that all campuses inherit. You edit files locally, preview them against the live Primo instance in your browser, then open a pull request. Once OLS merges it, GitHub Actions automatically builds the zip packages ready to upload to the Back Office.
 
+```
+Your machine                     GitHub                        Primo Back Office
+────────────────                 ──────────────────────        ─────────────────
+Edit files locally  →  Push branch & open PR  →  OLS merges  →  OLS uploads zip
+Preview via Docker                                              (GitHub Actions
+at localhost:8003                                               builds zips on merge)
+```
 
-## Structure
+---
 
-- <b>gulp directory</b> : holds the various build scripts for the environment and the  <b>config.js</b> configuration file in which your target proxy-server must be defined.
+## For campus librarians
 
-- <b>node_modules directory</b> : holds the various third-party modules that are required to run the system. These modules are defined in the <b>package.json</b> file.
+### Prerequisites
 
-- <b>packages directory</b> : once your development package is ready you will be able to build it using the `gulp create-package` command that will create the zipped package file you define in this folder
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
+- Git installed — [GitHub's getting started guide](https://docs.github.com/en/get-started/getting-started-with-git) if you need a refresher
+- A GitHub account with access to [github.com/cuny-libraries](https://github.com/cuny-libraries)
+- Your 2-character campus code (e.g. `kb` for Kingsborough)
 
-- <b>primo-explore directory</b> : consists of 2 directories :
-   1. <b>custom</b> : - where you will place your customization packages
-   2. <b>tmp</b> : just a place to hold some of your temporary files
+### One-time setup
 
-## Overview
+```bash
+git clone https://github.com/cuny-libraries/primo-ve-nui.git
+cd primo-ve-nui
+docker compose build
+```
 
-The development package allows you to configure the following page components (follow the links for details):
+The last step downloads the development environment into Docker — it takes a few minutes the first time and doesn't need to be repeated unless OLS announces an update.
 
-- [CSS](https://github.com/ExLibrisGroup/primo-explore-package/tree/master/VIEW_CODE/css "css documentation")
+### Making changes
 
-- [HTML](https://github.com/ExLibrisGroup/primo-explore-package/tree/master/VIEW_CODE/html "html documentation")
+**1. Start from an up-to-date main branch**
 
-- [Images](https://github.com/ExLibrisGroup/primo-explore-package/tree/master/VIEW_CODE/img "images documentation")
+```bash
+git checkout main
+git pull
+```
 
-- [JavaScript](https://github.com/ExLibrisGroup/primo-explore-package/tree/master/VIEW_CODE/js "javascript documentation")
+**2. Create a branch for your work**
 
-For each configuration-type, or for every different Primo View, there should be a specified folder named after the View (which adheres to the established directory structure) in the `primo-explore/custom` package folder.
+Include your campus code in the branch name:
 
-This custom View folder can be downloaded from your Primo Back Office, by following `Primo Home > Primo Utilities > UI customization Package Manager`, or started fresh from the [primo-explore-package GitHub repository](https://github.com/ExLibrisGroup/primo-explore-package "primo-explore-package repository"). (The benefit of using this repository is that in each folder you will find a specific README.md file containing recipes and examples.)
+```bash
+git checkout -b kb/update-homepage
+```
 
+**3. Start the local preview server**
 
-## Installation
+```bash
+./run.sh kb
+```
 
-Note: If you are not the Administrator of your machine, you might get into problems in the flow below, we recommend using the "Node.js command prompt (search for cmd in your pc to locate it) whenever the instructions below refer to "command line".
+Replace `kb` with your 2-character campus code. This starts a local server that proxies your live Primo instance — so you'll see real search results with your local customizations applied.
 
-1.  Download the project from this repository and place it on your computer
+**4. Open the preview in your browser**
 
-2.  Unzip the file you downloaded to a preferred development project folder location
+```
+http://localhost:8003/discovery/?vid=01CUNY_KB:CUNY_KB
+```
 
-3.  Download and install the [Node version 16.17.0](https://nodejs.org/download/release/v16.17.0/)
+Replace both instances of `KB` with your uppercase campus code.
 
-4.  Restart your computer
+**5. Edit your campus files**
 
-5.  From command line, run the command : `npm install -g gulp`
+Your files are in `primo-explore/custom/CUNY_KB/` (substitute your code):
 
-6.  In a <b>new</b> command line window, navigate to the project base directory (`cd \path\to\your\project\folder\primo-explore-devenv`)
+```
+primo-explore/custom/CUNY_KB/
+├── css/
+│   └── custom1.css       ← your custom styles
+├── js/
+│   └── custom.js         ← your custom JavaScript
+├── html/
+│   └── homepage/
+│       └── homepage_en.html  ← your homepage HTML
+└── img/                  ← logos, favicon, icons
+```
 
-7.  From command line, run the command : `npm install` (This should install all node modules needed for gulp.)
+Save a file and refresh your browser to see changes immediately. Stop the server with `Ctrl+C` when you're done.
 
-    ![npm install image](./help_files/npmInstall.png "Running npm install")
+> **Please limit your changes to your own campus folder.** You're welcome to look inside other campuses' folders for inspiration, but changes to them — or to `CENTRAL_PACKAGE` — belong to OLS. Any accidental changes will be caught during PR review anyway.
 
-8.  Edit Gulp configuration file's <i>proxy server</i> setting, found at <b>gulp/config.js</b> : `var PROXY_SERVER = http://your-server:your-port` (Make sure to use your real Sandbox or Production Primo Front-End URL.) Note that for SSL environments (HTTPS) define the server as: `var PROXY_SERVER = https://your-server:443`
+**6. Commit and push your changes**
 
-9. Populate your custom View package folder in the custom package folder ("...primo-explore\custom"), by either downloading the view code files from your Primo Back Office or using the [primo-explore-package GitHub repository](https://github.com/ExLibrisGroup/primo-explore-package "primo-explore-package repository")) to start a new package folder. (if you have already defined a view package and loaded it to the BO - make sure you download it or else you will not see, and may overwrite, your previous changes.)
+```bash
+git add primo-explore/custom/CUNY_KB/
+git commit -m "Brief description of what you changed"
+git push origin kb/update-homepage
+```
 
-   - If your custom view package folder were to be called "Auto1" then your development environment directory tree should look similar to this: 
-   ![Directory tree image](./help_files/direcoryTree.png "Directory tree")
-   
-   - <b>IMPORTANT:</b> The name of your custom view package folder must match an <i>existing</i> view on the proxy server being referenced or the Gulp server will not function properly. For development from scratch, be sure to first create (or copy) a view using the Primo Back Office View Wizard; then you can accomplish your customizations locally using this document.
-    
-10. Start your code customizations : 
+**7. Open a pull request**
 
-   - From command line, run the command : `gulp run --view <the VIEW_CODE folder>` (This will start your local server.)
-   
-     (For example, running `gulp run --view Auto1` will start the environment taking the customizations from the <b>Auto1</b> folder.)
-     
-     ![Server Startup Image](./help_files/serverStartup.png "Server Startup")
-   - For Primo VE customers, add the --ve flag :
-      `gulp run --view <the VIEW_CODE folder> --ve`
-   - Open a browser and type in the following URL : `localhost:8003/primo-explore/?vid=your-view-code`  (Example: http://localhost:8003/primo-explore/search?vid=Auto1)
-   - For Primo VE customers open the following URL : `localhost:8003/discovery/?vid=your-institution-code:your-view-code`
+Go to [github.com/cuny-libraries/primo-ve-nui](https://github.com/cuny-libraries/primo-ve-nui) — GitHub will show a prompt to open a PR from your branch. Add a short description of what you changed and why, then submit it for review.
 
-   -  Now you should be able to to your customizations with real searches and results, from your previously defined proxy-server. Note: once you start working with this environment, you will discover that the best results are achieved by working in your browser's incognito mode; or you can clear your browser cache before you start the Gulp server.
-   
-   ![Env up Image](./help_files/searchResults.png "Env up")
+OLS will review your changes, ask questions if needed, and merge when ready. Once merged, your changes will be packaged and deployed to your live Primo view by OLS.
 
-   -  You can get immediate feedback on your code changes by refreshing the browser.
+---
 
-   -  Perform your changes according to the documentation/examples in:
+## For OLS Systems Librarians
 
-      - [CSS](https://github.com/ExLibrisGroup/primo-explore-package/tree/master/VIEW_CODE/css "css documentation")
+### Running the dev server
 
-      - [HTML](https://github.com/ExLibrisGroup/primo-explore-package/tree/master/VIEW_CODE/html "html documentation")
+```bash
+./run.sh <campus>     # e.g. ./run.sh kb
+./run.sh network      # CUNY_NETWORK view (proxies cuny-network.primo.exlibrisgroup.com)
+./run.sh central      # CENTRAL_PACKAGE only (proxies through cuny-network)
+```
 
-      - [Images](https://github.com/ExLibrisGroup/primo-explore-package/tree/master/VIEW_CODE/img "images documentation")
+Running with no argument lists all available views.
 
-      - [JavaScript](https://github.com/ExLibrisGroup/primo-explore-package/tree/master/VIEW_CODE/js "javascript documentation")
+Preview URL: `http://localhost:8003/discovery/?vid=01CUNY_KB:CUNY_KB`
 
+### Working on the central package
 
-Note: you have multiple options to edit the css file(custom1.css) and the js file(custom.js), some of them include methods of splitting your developments to seperate files. When using such methods - the custom1.css and custom.js files will be overriden by the different files when gulp is run. Place your custom css and js into files with different names such as custommodule.css or custom.module.js to have it concactinated into the custom css/js files.
+`CENTRAL_PACKAGE` is inherited by all 22 IZ views. Changes here affect everyone — test carefully.
 
+```bash
+./run.sh central
+```
 
-## Publishing packages
+Preview against any campus by substituting their `vid`. Since the central package is inherited by all, any campus URL will reflect central package changes.
 
-Once you finish customizing the package, you can zip up that directory and upload it using the Primo BackOffice.
+### Reviewing and merging PRs
 
-1. In a command line window, navigate to the project base directory : `cd \path\to\your\project\folder\primo-explore-devenv`
+- Check that changes are limited to the submitting campus's folder
+- Use the GitHub preview to read through the diff before approving
+- Merging to `main` triggers the **Create Packages** GitHub Actions workflow automatically
 
-2. From command line, run the command : `gulp create-package` You will be prompted with a menu specifying all of the possible packages you can build, such as :
+### Deploying to production
 
-    ![Create Package Image](./help_files/createPackage.png "Create Package up")
+After merging a PR:
 
-    ![Package Image](./help_files/packages.png "Package up")
+1. Go to the **Actions** tab in this repository
+2. Open the latest **Create Packages** run
+3. Download the `primo-ve-packages` artifact (a zip containing all 24 packages)
+4. Extract it and upload the relevant `.zip` file(s) to the appropriate Back Office:
+   - **IZ package**: `Alma > Discovery > Display Configuration > Configure Views > Manage Customization Package`
+   - **Central package**: same path, in the **Network Zone** Back Office
+5. Deploy in the Back Office
 
-3. Log into Primo Back Office and navigate to the <b>UI customization Package manager</b> section : `Primo Home > Primo Utilities > UI customization Package Manager`
+### If the dev environment itself needs updating
 
-4. Use the file <b>browse</b> button to find and upload the new zipped package file. (Located in the "\path\to\your\project\folder\primo-explore-devenv\package" directory.)
+If `Dockerfile`, `package.json`, or anything in `gulp/` changes, campus librarians will need to rebuild their local Docker image:
 
-    ![BO Image](./help_files/bo.png "BO up")
+```bash
+docker compose build
+```
 
-5. Don't forget to <b>deploy</b> your changes
+Announce this to campus librarians when it happens — they won't know to rebuild otherwise.
 
+---
 
-## Publishing Primo-Studio addons
+## Package structure reference
 
-Once you finish customizing the package, you can get it ready to be published to Primo-Studio.
+| Folder | Description |
+|---|---|
+| `CENTRAL_PACKAGE/` | Inherited by all campuses. Managed by OLS. |
+| `CUNY_NETWORK/` | The network-level Primo view. Managed by OLS. |
+| `CUNY_XX/` | Campus-specific package. Managed by that campus (with OLS review). |
 
-1. In a command line window, navigate to the project base directory : `cd \path\to\your\project\folder\primo-explore-devenv`
+## Resources
 
-2. From command line, run the command : `gulp prepare-addon` You will be prompted with a menu specifying all of the possible packages you can build.
-
-3. Once you finished running the script a folder containing the add-on will be created in `\path\to\your\project\folder\primo-explore-devenv\addons`.
-
-4. From the above folder you can publish your add-on to NPM and to Primo-Studio. For Instructions see: [Primo-Studio add-on tutorial](https://github.com/ExLibrisGroup/Primo-Studio-Addon-Tutorial)
+- [Primo VE Customization documentation](https://knowledge.exlibrisgroup.com/Primo/Product_Documentation/020Primo_VE/Primo_VE_(English)/030Primo_VE_User_Interface/010Primo_VE_Customization_-_Best_Practices) — Ex Libris Knowledge Center
+- [primo-explore-devenv](https://github.com/ExLibrisGroup/primo-explore-devenv) — the underlying development environment this repo is built on
+- [Git handbook](https://docs.github.com/en/get-started/using-git/about-git) — GitHub
+- [Atlassian Git tutorials](https://www.atlassian.com/git/tutorials) — good reference for branching and pull request workflows
